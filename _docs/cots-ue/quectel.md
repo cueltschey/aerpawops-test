@@ -1,3 +1,9 @@
+--
+title: Quectel
+category: COTS UE
+order: 1
+--
+
 ## Some useful qmicli commands
 
 To use the following commands ensure qmicli and udhcpc are installed:
