@@ -6,6 +6,8 @@ order: 1
 
 ## Some useful qmicli commands
 
+![Some graph](../../20250402_13h49m54s_grim.png)
+
 To use the following commands ensure qmicli and udhcpc are installed:
 
 ```bash
@@ -142,3 +144,5 @@ Verify that the device is not loaded into ModemManager like so:
 ```bash
 mmcli -L
 ```
+
+<embed src="../../file.pdf" type="application/pdf" width="100%" height="600px" />
