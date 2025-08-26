@@ -1,0 +1,42 @@
+name: Build & Deploy Docs
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'manual/**'
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'   
+
+      - name: Install dependencies
+        working-directory: ./manual
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install sphinx sphinx-rtd-theme
+
+      - name: Build docs
+        working-directory: ./manual
+        run: |
+          sphinx-build -b html . _build/html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./manual/_build/html
+          force_orphan: true
+          commit_message: "ci: update docs (built from ${{ github.sha }})"
