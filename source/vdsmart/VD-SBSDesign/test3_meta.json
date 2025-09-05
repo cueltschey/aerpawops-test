@@ -1,0 +1,1390 @@
+{
+  "table_of_contents": [
+    {
+      "title": "SBS Design",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.400001525878906,
+          96.17999267578125
+        ],
+        [
+          138.51513671875,
+          96.17999267578125
+        ],
+        [
+          138.51513671875,
+          113.5986328125
+        ],
+        [
+          56.400001525878906,
+          113.5986328125
+        ]
+      ]
+    },
+    {
+      "title": "The PCB is done in mm (not mil)",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.400001525878906,
+          128.583984375
+        ],
+        [
+          231.90890502929688,
+          128.583984375
+        ],
+        [
+          231.90890502929688,
+          143.859375
+        ],
+        [
+          56.400001525878906,
+          143.859375
+        ]
+      ]
+    },
+    {
+      "title": "MCU Connections",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.3291015625,
+          187.4619140625
+        ],
+        [
+          161.9529571533203,
+          187.4619140625
+        ],
+        [
+          161.9529571533203,
+          202.060546875
+        ],
+        [
+          56.3291015625,
+          202.060546875
+        ]
+      ]
+    },
+    {
+      "title": "System control",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.400001525878906,
+          214.822265625
+        ],
+        [
+          125.55128479003906,
+          214.822265625
+        ],
+        [
+          125.55128479003906,
+          228.357421875
+        ],
+        [
+          56.400001525878906,
+          228.357421875
+        ]
+      ]
+    },
+    {
+      "title": "Power",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          55.843505859375,
+          282.111328125
+        ],
+        [
+          87.77417755126953,
+          282.111328125
+        ],
+        [
+          87.77417755126953,
+          294.873046875
+        ],
+        [
+          55.843505859375,
+          294.873046875
+        ]
+      ]
+    },
+    {
+      "title": "S128 datasheet Table 2.1",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          250.2956085205078,
+          402.9609375
+        ],
+        [
+          343.9407043457031,
+          402.9609375
+        ],
+        [
+          343.9407043457031,
+          414.5625
+        ],
+        [
+          250.2956085205078,
+          414.5625
+        ]
+      ]
+    },
+    {
+      "title": "Clocks",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          55.95556640625,
+          513.94921875
+        ],
+        [
+          91.61491394042969,
+          513.94921875
+        ],
+        [
+          91.61491394042969,
+          527.09765625
+        ],
+        [
+          55.95556640625,
+          527.09765625
+        ]
+      ]
+    },
+    {
+      "title": "Selecting crystal oscillator load capacitors",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          56.400001525878906,
+          208.0546875
+        ],
+        [
+          226.74278259277344,
+          208.0546875
+        ],
+        [
+          226.74278259277344,
+          220.4296875
+        ],
+        [
+          56.400001525878906,
+          220.4296875
+        ]
+      ]
+    },
+    {
+      "title": "Serial Wire Debug",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          56.291748046875,
+          490.359375
+        ],
+        [
+          141.4651641845703,
+          490.359375
+        ],
+        [
+          141.4651641845703,
+          503.5078125
+        ],
+        [
+          56.291748046875,
+          503.5078125
+        ]
+      ]
+    },
+    {
+      "title": "RGB LED",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          56.0302734375,
+          165.322265625
+        ],
+        [
+          101.8177719116211,
+          165.322265625
+        ],
+        [
+          101.8177719116211,
+          178.470703125
+        ],
+        [
+          56.0302734375,
+          178.470703125
+        ]
+      ]
+    },
+    {
+      "title": "Piezo",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          55.65673828125,
+          518.58984375
+        ],
+        [
+          85.91959381103516,
+          518.58984375
+        ],
+        [
+          85.91959381103516,
+          532.51171875
+        ],
+        [
+          55.65673828125,
+          532.51171875
+        ]
+      ]
+    },
+    {
+      "title": "Power",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          55.50732421875,
+          677.53125
+        ],
+        [
+          94.98109436035156,
+          677.53125
+        ],
+        [
+          94.98109436035156,
+          691.453125
+        ],
+        [
+          55.50732421875,
+          691.453125
+        ]
+      ]
+    },
+    {
+      "title": "MCU Power",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.90966796875,
+          145.40625
+        ],
+        [
+          112.18635559082031,
+          145.40625
+        ],
+        [
+          112.18635559082031,
+          157.587890625
+        ],
+        [
+          54.90966796875,
+          157.587890625
+        ]
+      ]
+    },
+    {
+      "title": "Reference voltage",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          56.3291015625,
+          460.96875
+        ],
+        [
+          132.26113891601562,
+          460.96875
+        ],
+        [
+          132.26113891601562,
+          472.5703125
+        ],
+        [
+          56.3291015625,
+          472.5703125
+        ]
+      ]
+    },
+    {
+      "title": "TLV431 Output Voltage",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          57.5244140625,
+          148.6468505859375
+        ],
+        [
+          195.05599975585938,
+          148.6468505859375
+        ],
+        [
+          195.05599975585938,
+          162.615234375
+        ],
+        [
+          57.5244140625,
+          162.615234375
+        ]
+      ]
+    },
+    {
+      "title": "Detect Signal",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          56.25439453125,
+          279.00640869140625
+        ],
+        [
+          132.0589599609375,
+          279.00640869140625
+        ],
+        [
+          132.0589599609375,
+          293.90625
+        ],
+        [
+          56.25439453125,
+          293.90625
+        ]
+      ]
+    },
+    {
+      "title": "Thermistor",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          55.992919921875,
+          706.3862915039062
+        ],
+        [
+          120.89814758300781,
+          706.3862915039062
+        ],
+        [
+          120.89814758300781,
+          721.23046875
+        ],
+        [
+          55.992919921875,
+          721.23046875
+        ]
+      ]
+    },
+    {
+      "title": "NTCLE413E2103H401 datasheet",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          56.400001525878906,
+          37.970947265625
+        ],
+        [
+          228.19932556152344,
+          37.970947265625
+        ],
+        [
+          228.19932556152344,
+          52.787109375
+        ],
+        [
+          56.400001525878906,
+          52.787109375
+        ]
+      ]
+    },
+    {
+      "title": "NTC Thermistor",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          56.77734375,
+          63.9869384765625
+        ],
+        [
+          155.9870147705078,
+          63.9869384765625
+        ],
+        [
+          155.9870147705078,
+          78.697265625
+        ],
+        [
+          56.77734375,
+          78.697265625
+        ]
+      ]
+    },
+    {
+      "title": "Cell, Stack, and Output Voltage measurement",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          56.400001525878906,
+          253.880859375
+        ],
+        [
+          308.689453125,
+          253.880859375
+        ],
+        [
+          308.689453125,
+          268.189453125
+        ],
+        [
+          56.400001525878906,
+          268.189453125
+        ]
+      ]
+    },
+    {
+      "title": "FET Array and Gate Driver",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          56.291748046875,
+          151.50543212890625
+        ],
+        [
+          202.43710327148438,
+          151.50543212890625
+        ],
+        [
+          202.43710327148438,
+          166.482421875
+        ],
+        [
+          56.291748046875,
+          166.482421875
+        ]
+      ]
+    },
+    {
+      "title": "LTC7000 Pinout",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          55.694091796875,
+          244.01953125
+        ],
+        [
+          130.67935180664062,
+          244.01953125
+        ],
+        [
+          130.67935180664062,
+          257.5546875
+        ],
+        [
+          55.694091796875,
+          257.5546875
+        ]
+      ]
+    },
+    {
+      "title": "Limit Inrush Current",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          55.694091796875,
+          693.0
+        ],
+        [
+          149.2397003173828,
+          693.0
+        ],
+        [
+          149.2397003173828,
+          706.1484375
+        ],
+        [
+          55.694091796875,
+          706.1484375
+        ]
+      ]
+    },
+    {
+      "title": "Don't need to limit",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          55.65673828125,
+          64.01092529296875
+        ],
+        [
+          153.60397338867188,
+          64.01092529296875
+        ],
+        [
+          153.60397338867188,
+          77.48876953125
+        ],
+        [
+          55.65673828125,
+          77.48876953125
+        ]
+      ]
+    },
+    {
+      "title": "Reverse Current Protection (aka \"load switching\")",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.984375,
+          120.01190185546875
+        ],
+        [
+          280.4114074707031,
+          120.01190185546875
+        ],
+        [
+          280.4114074707031,
+          131.3876953125
+        ],
+        [
+          54.984375,
+          131.3876953125
+        ]
+      ]
+    },
+    {
+      "title": "Flyback diode connection to TS",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          55.768798828125,
+          339.82196044921875
+        ],
+        [
+          201.80653381347656,
+          339.82196044921875
+        ],
+        [
+          201.80653381347656,
+          351.9140625
+        ],
+        [
+          55.768798828125,
+          351.9140625
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          422.244140625,
+          359.26171875
+        ],
+        [
+          510.099609375,
+          359.26171875
+        ],
+        [
+          510.099609375,
+          367.76953125
+        ],
+        [
+          422.244140625,
+          367.76953125
+        ]
+      ]
+    },
+    {
+      "title": "Current Amplifiers",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          56.366455078125,
+          563.0757446289062
+        ],
+        [
+          162.84458923339844,
+          563.0757446289062
+        ],
+        [
+          162.84458923339844,
+          576.4911346435547
+        ],
+        [
+          56.366455078125,
+          576.4911346435547
+        ]
+      ]
+    },
+    {
+      "title": "Ideal Diode",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          55.7314453125,
+          600.1875
+        ],
+        [
+          125.5220718383789,
+          600.1875
+        ],
+        [
+          125.5220718383789,
+          614.8828125
+        ],
+        [
+          55.7314453125,
+          614.8828125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          225
+        ],
+        [
+          "Line",
+          13
+        ],
+        [
+          "TableCell",
+          8
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          243
+        ],
+        [
+          "Line",
+          17
+        ],
+        [
+          "ListItem",
+          12
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          349
+        ],
+        [
+          "Line",
+          25
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TextInlineMath",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          364
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          173
+        ],
+        [
+          "TableCell",
+          140
+        ],
+        [
+          "Line",
+          20
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          465
+        ],
+        [
+          "TableCell",
+          41
+        ],
+        [
+          "Line",
+          24
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "TextInlineMath",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          544
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "TableCell",
+          30
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TextInlineMath",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          457
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "ListItem",
+          15
+        ],
+        [
+          "ListGroup",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          539
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Handwriting",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          583
+        ],
+        [
+          "Line",
+          42
+        ],
+        [
+          "TableCell",
+          21
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          475
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "TableCell",
+          33
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          345
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "TableCell",
+          6
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "TextInlineMath",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "ListItem",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          231
+        ],
+        [
+          "TableCell",
+          216
+        ],
+        [
+          "Line",
+          15
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          117
+        ],
+        [
+          "Line",
+          15
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          325
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          457
+        ],
+        [
+          "Line",
+          21
+        ],
+        [
+          "Text",
+          7
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/test3"
+}

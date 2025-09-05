@@ -1,11 +1,6 @@
 Smart Battery System
 ====================
 
-.. toctree::
-   :maxdepth: 1
-
-   VD_SBS
-
 https://github.com/AERPAW/sbs
 
 TODO List
@@ -76,7 +71,7 @@ TODO List
        the MCU ROM
 
 Requirements
-============
+~~~~~~~~~~~
 
 -  `Interface <https://aerpaw-uav.atlassian.net/l/cp/KRZx15VE>`__
 
@@ -152,7 +147,7 @@ Requirements
    -  Open means nothing is connected
 
 Software Notes
-==============
+~~~~~~~~~~~~~
 
 -  e^2 studio: e²
    `studio <https://www.renesas.com/us/en/software-tool/e-studio>`__
@@ -173,7 +168,7 @@ Software Notes
    data (we have rev. 2)
 
 MCU Notes
-=========
+~~~~~~~~~
 
 Pin Mappings
 ------------

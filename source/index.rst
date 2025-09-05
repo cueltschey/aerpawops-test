@@ -6,6 +6,7 @@ AERPAW Operators Manual
    :caption: VD Smart
 
    vdsmart/index
+   vdsmart/VD-SBSDesign/index
 
 .. toctree::
    :maxdepth: 2
