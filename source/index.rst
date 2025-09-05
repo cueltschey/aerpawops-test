@@ -1,11 +1,14 @@
 AERPAW Operators Manual
-=======================
-
-A guide for setting up and maintaining AERPAW Sandbox and Testbed servers and radios.
+=====================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Getting Started
+   :caption: VD Smart
 
-   Quectel <quectel>
-   Testing Page <test>
+   vdsmart/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: LAM6
+
+   lam6/index

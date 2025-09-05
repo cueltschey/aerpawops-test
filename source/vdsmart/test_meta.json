@@ -1,0 +1,696 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Smart Battery System",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          55.880859375,
+          96.408203125
+        ],
+        [
+          206.1878204345703,
+          96.408203125
+        ],
+        [
+          206.1878204345703,
+          114.08203125
+        ],
+        [
+          55.880859375,
+          114.08203125
+        ]
+      ]
+    },
+    {
+      "title": "https://github.com/AERPAW/sbs \u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 \u0430\u043a\u043a\u0430\u0443\u043d\u0442 Github",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.9267578125,
+          128.77734375
+        ],
+        [
+          430.1642761230469,
+          128.77734375
+        ],
+        [
+          430.1642761230469,
+          143.279296875
+        ],
+        [
+          56.9267578125,
+          143.279296875
+        ]
+      ]
+    },
+    {
+      "title": "TODO List",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.400001525878906,
+          157.1044921875
+        ],
+        [
+          104.44801330566406,
+          157.1044921875
+        ],
+        [
+          104.44801330566406,
+          171.2197265625
+        ],
+        [
+          56.400001525878906,
+          171.2197265625
+        ]
+      ]
+    },
+    {
+      "title": "Requirements",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.217041015625,
+          511.1058044433594
+        ],
+        [
+          152.892333984375,
+          511.1058044433594
+        ],
+        [
+          152.892333984375,
+          527.87109375
+        ],
+        [
+          56.217041015625,
+          527.87109375
+        ]
+      ]
+    },
+    {
+      "title": "Software Notes",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          56.142333984375,
+          671.9795379638672
+        ],
+        [
+          163.241943359375,
+          671.9795379638672
+        ],
+        [
+          163.241943359375,
+          689.51953125
+        ],
+        [
+          56.142333984375,
+          689.51953125
+        ]
+      ]
+    },
+    {
+      "title": "MCU Notes",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          55.80615234375,
+          140.04949951171875
+        ],
+        [
+          137.34762573242188,
+          140.04949951171875
+        ],
+        [
+          137.34762573242188,
+          156.7177734375
+        ],
+        [
+          55.80615234375,
+          156.7177734375
+        ]
+      ]
+    },
+    {
+      "title": "Pin Mappings",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          56.1796875,
+          172.7412109375
+        ],
+        [
+          136.49569702148438,
+          172.7412109375
+        ],
+        [
+          136.49569702148438,
+          187.55859375
+        ],
+        [
+          56.1796875,
+          187.55859375
+        ]
+      ]
+    },
+    {
+      "title": "CAN Communication",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          55.843505859375,
+          362.935546875
+        ],
+        [
+          177.71646118164062,
+          362.935546875
+        ],
+        [
+          177.71646118164062,
+          377.244140625
+        ],
+        [
+          55.843505859375,
+          377.244140625
+        ]
+      ]
+    },
+    {
+      "title": "Analog Voltages / ADC",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          56.400001525878906,
+          713.0123443603516
+        ],
+        [
+          188.8514862060547,
+          713.0123443603516
+        ],
+        [
+          188.8514862060547,
+          727.8046875
+        ],
+        [
+          56.400001525878906,
+          727.8046875
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          84.1201171875,
+          40.55712890625
+        ],
+        [
+          259.2333984375,
+          40.55712890625
+        ],
+        [
+          259.2333984375,
+          50.99853515625
+        ],
+        [
+          84.1201171875,
+          50.99853515625
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          107.20458984375,
+          426.9375
+        ],
+        [
+          323.33203125,
+          426.9375
+        ],
+        [
+          323.33203125,
+          436.9921875
+        ],
+        [
+          107.20458984375,
+          436.9921875
+        ]
+      ]
+    },
+    {
+      "title": "S128 User Manual Table 46.49",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          249.3720703125,
+          592.5278015136719
+        ],
+        [
+          372.5796203613281,
+          592.5278015136719
+        ],
+        [
+          372.5796203613281,
+          602.12109375
+        ],
+        [
+          249.3720703125,
+          602.12109375
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          101.22802734375,
+          605.98828125
+        ],
+        [
+          145.45458984375,
+          605.98828125
+        ],
+        [
+          145.45458984375,
+          615.26953125
+        ],
+        [
+          101.22802734375,
+          615.26953125
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          96.8203125,
+          184.3681640625
+        ],
+        [
+          243.544921875,
+          184.3681640625
+        ],
+        [
+          243.544921875,
+          194.4228515625
+        ],
+        [
+          96.8203125,
+          194.4228515625
+        ]
+      ]
+    },
+    {
+      "title": "Low Power Modes",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          56.366455078125,
+          374.8824768066406
+        ],
+        [
+          162.2932891845703,
+          374.8824768066406
+        ],
+        [
+          162.2932891845703,
+          388.265625
+        ],
+        [
+          56.366455078125,
+          388.265625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          530
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "ListItem",
+          23
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          576
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "ListItem",
+          27
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          229
+        ],
+        [
+          "Line",
+          37
+        ],
+        [
+          "TableCell",
+          20
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          267
+        ],
+        [
+          "TableCell",
+          48
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          153
+        ],
+        [
+          "TableCell",
+          32
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "ListItem",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "TableCell",
+          89
+        ],
+        [
+          "Span",
+          81
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "Line",
+          7
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          199
+        ],
+        [
+          "TableCell",
+          43
+        ],
+        [
+          "Line",
+          12
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          219
+        ],
+        [
+          "TableCell",
+          130
+        ],
+        [
+          "Line",
+          13
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/test"
+}
