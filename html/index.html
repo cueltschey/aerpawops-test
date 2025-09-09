@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AERPAW Operators Manual &mdash; AERPAW Operators Manual 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/hoverxref.js"></script>
+      <script src="_static/js/tooltipster.bundle.min.js"></script>
+      <script src="_static/js/micromodal.min.js"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Smart Battery System" href="vdsmart/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            AERPAW Operators Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">VD Smart</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/index.html">Smart Battery System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#todo-list">TODO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#software-notes">Software Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#mcu-notes">MCU Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/index.html#pin-mappings">Pin Mappings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#can-communication">CAN Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/index.html#analog-voltages-adc">Analog Voltages / ADC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/index.html#s128-user-manual-table-46-49">S128 User Manual Table 46.49</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/index.html#low-power-modes">Low Power Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html">SBS Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#the-pcb-is-done-in-mm-not-mil">The PCB is done in mm (not mil)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#mcu-connections">MCU Connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#system-control">System control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#power">Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#s128-datasheet-table-2-1">S128 datasheet Table 2.1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#clocks">Clocks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#selecting-crystal-oscillator-load-capacitors">Selecting crystal oscillator load capacitors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#serial-wire-debug">Serial Wire Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#rgb-led">RGB LED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#piezo">Piezo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#power-1">Power</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#mcu-power">MCU Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#reference-voltage">Reference voltage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#tlv431-output-voltage">TLV431 Output Voltage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#detect-signal">Detect Signal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#thermistor">Thermistor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ntcle413e2103h401-datasheet">NTCLE413E2103H401 datasheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ntc-thermistor">NTC Thermistor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#cell-stack-and-output-voltage-measurement">Cell, Stack, and Output Voltage measurement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#fet-array-and-gate-driver">FET Array and Gate Driver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ltc7000-pinout">LTC7000 Pinout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#limit-inrush-current">Limit Inrush Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#dont-need-to-limit">Don’t need to limit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#reverse-current-protection-aka-load-switching">Reverse Current Protection (aka “load switching”)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#flyback-diode-connection-to-ts">Flyback diode connection to TS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#current-amplifiers">Current Amplifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ideal-diode">Ideal Diode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAM6</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lam6/index.html">VD Smart</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">AERPAW Operators Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AERPAW Operators Manual</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aerpaw-operators-manual">
+<h1>AERPAW Operators Manual<a class="headerlink" href="#aerpaw-operators-manual" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">VD Smart</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/index.html">Smart Battery System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#todo-list">TODO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#software-notes">Software Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#mcu-notes">MCU Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/index.html#can-communication">CAN Communication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html">SBS Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#the-pcb-is-done-in-mm-not-mil">The PCB is done in mm (not mil)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#detect-signal">Detect Signal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#thermistor">Thermistor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ntcle413e2103h401-datasheet">NTCLE413E2103H401 datasheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ntc-thermistor">NTC Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#fet-array-and-gate-driver">FET Array and Gate Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vdsmart/VD-SBSDesign/index.html#ideal-diode">Ideal Diode</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">LAM6</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lam6/index.html">VD Smart</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vdsmart/index.html" class="btn btn-neutral float-right" title="Smart Battery System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, AERPAW.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

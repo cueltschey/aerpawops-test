@@ -1,0 +1,1795 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBS Design &mdash; AERPAW Operators Manual 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="VD Smart" href="../../lam6/index.html" />
+    <link rel="prev" title="Smart Battery System" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            AERPAW Operators Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">VD Smart</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Smart Battery System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#todo-list">TODO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#software-notes">Software Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mcu-notes">MCU Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#pin-mappings">Pin Mappings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#can-communication">CAN Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#analog-voltages-adc">Analog Voltages / ADC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#s128-user-manual-table-46-49">S128 User Manual Table 46.49</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#low-power-modes">Low Power Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SBS Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-pcb-is-done-in-mm-not-mil">The PCB is done in mm (not mil)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mcu-connections">MCU Connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-control">System control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#power">Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#s128-datasheet-table-2-1">S128 datasheet Table 2.1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#clocks">Clocks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-crystal-oscillator-load-capacitors">Selecting crystal oscillator load capacitors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#serial-wire-debug">Serial Wire Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgb-led">RGB LED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piezo">Piezo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-1">Power</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mcu-power">MCU Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reference-voltage">Reference voltage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tlv431-output-voltage">TLV431 Output Voltage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#detect-signal">Detect Signal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#thermistor">Thermistor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ntcle413e2103h401-datasheet">NTCLE413E2103H401 datasheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ntc-thermistor">NTC Thermistor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cell-stack-and-output-voltage-measurement">Cell, Stack, and Output Voltage measurement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fet-array-and-gate-driver">FET Array and Gate Driver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ltc7000-pinout">LTC7000 Pinout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#limit-inrush-current">Limit Inrush Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dont-need-to-limit">Don’t need to limit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reverse-current-protection-aka-load-switching">Reverse Current Protection (aka “load switching”)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flyback-diode-connection-to-ts">Flyback diode connection to TS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#current-amplifiers">Current Amplifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#ideal-diode">Ideal Diode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAM6</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lam6/index.html">VD Smart</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AERPAW Operators Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SBS Design</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sbs-design">
+<h1>SBS Design<a class="headerlink" href="#sbs-design" title="Link to this heading">¶</a></h1>
+<section id="the-pcb-is-done-in-mm-not-mil">
+<h2>The PCB is done in mm (not mil)<a class="headerlink" href="#the-pcb-is-done-in-mm-not-mil" title="Link to this heading">¶</a></h2>
+<p>If the LDO driving AVCC0 turns off, what happens for the ADC input pins?</p>
+<section id="mcu-connections">
+<h3>MCU Connections<a class="headerlink" href="#mcu-connections" title="Link to this heading">¶</a></h3>
+</section>
+<section id="system-control">
+<h3>System control<a class="headerlink" href="#system-control" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>MD (operating mode control): P201 (26)</p>
+<ul>
+<li><p>This pin must be set before releasing reset (RES) and held
+constant for the duration of the MCU’s uptime or until the next
+assertion of RES.</p></li>
+</ul>
+</li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode-setting pin</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MD</p></td>
+<td><p>Operating mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Single-chip mode</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>SCI boot mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image1" src="../../_images/_page_0_Figure_9.jpeg" /></p>
+<p>An onboard 0.1” header will be used to let the user add a jumper in case
+SCI booting is desired</p>
+<ul class="simple">
+<li><p>RES (active low reset): (5)</p>
+<ul>
+<li><p>The S128 User Manual discusses an internal power-on reset in
+section 5.3.2.</p></li>
+<li><p>The DK-S128 also lacks a power on reset circuit.</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image2" src="../../_images/_page_1_Figure_0.jpeg" /></p>
+<p>A manual reset switch can be optionally populated</p>
+<p>The 9-pin JTAG port is also linked to the MCU_nRESET net</p>
+<section id="power">
+<h4>Power<a class="headerlink" href="#power" title="Link to this heading">¶</a></h4>
+</section>
+<section id="s128-datasheet-table-2-1">
+<h4>S128 datasheet Table 2.1<a class="headerlink" href="#s128-datasheet-table-2-1" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>VCC and VSS need 0.1 uF caps between each pair of these pins</p></li>
+<li><p>VCL connected to VSS through a 4.7-uF capacitor</p></li>
+<li><p>AVCC0 and AVSS0 need a 0.1 uF cap</p></li>
+<li><p>VREFH0 and VREFL0 connect to reference supply and need a 0.1 uF cap</p></li>
+</ul>
+</section>
+</section>
+<section id="clocks">
+<h3>Clocks<a class="headerlink" href="#clocks" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>A 16 MHz external crystal will be connected to XTAL and EXTAL.</p>
+<ul>
+<li><p>XTAL: P213 (9)</p></li>
+<li><p>EXTAL: P212 (10)</p></li>
+</ul>
+</li>
+<li><p>To enable subosc-speed mode (current draw drops to uA), the sub-clock
+oscillator (connected through XCIN and XCOUT) must also be connected
+(S128 datasheet Table 2.11). This crystal must be 32.768 kHz.</p>
+<ul>
+<li><p>XCIN: P215 (6)</p></li>
+<li><p>XCOUT: P214 (7)</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image3" src="../../_images/_page_2_Figure_0.jpeg" /></p>
+<p>S128 User Manual section 8.3.1 suggests the following connection scheme
+for all crystals</p>
+<section id="selecting-crystal-oscillator-load-capacitors">
+<h4>Selecting crystal oscillator load capacitors<a class="headerlink" href="#selecting-crystal-oscillator-load-capacitors" title="Link to this heading">¶</a></h4>
+<p>Crystals will specify a range/typical expected load capacitance. This
+load capacitance can be expressed as CL = (CL1*CL2)/(CL1+CL2) + Cp
+(parallel combination of CL1 , CL2 and the series combination of those
+and parasitic capacitance Cp usually in the 2~5 pF range depending on
+traces) ( page 9). For CL1 = CL2 = C and solving for C = 2*(CL - Cp) .
+<a class="reference external" href="http://ww1.microchip.com/downloads/en/appnotes/00826a.pdf">http://ww1.microchip.com/downloads/en/appnotes/00826a.pdf</a></p>
+<p>Capacitors selected should have low temperature coefficients (e.g. C0G).</p>
+<p>16 MHz Oscillator</p>
+<p>CL = 12 pF and Cp = ~4 pF, so C = 16 pF (each)</p>
+<p><a class="reference external" href="https://media.digikey.com/pdf/Data%20Sheets/Jauch%20Quartz%20PDFs/J49SMH_Type_DS.pdf">https://media.digikey.com/pdf/Data</a>
+Sheets/Jauch Quartz PDFs/J49SMH_Type_DS.pdf</p>
+<p>32.768 kHz Oscillator</p>
+<p>CL = 12.5 pF and Cp = ~4 pF, so C = 17 pF (going to use same caps as for
+the 16 MHz oscillator)</p>
+</section>
+</section>
+<section id="serial-wire-debug">
+<h3>Serial Wire Debug<a class="headerlink" href="#serial-wire-debug" title="Link to this heading">¶</a></h3>
+<p>Target Interface SWD - SEGGER
+<a class="reference external" href="https://wiki.segger.com/SWD">Knowledge</a> Base</p>
+<ul class="simple">
+<li><p>SWCLK: P300 (32)</p></li>
+<li><p>SWDIO: P108 (33)</p></li>
+</ul>
+<p>9-pin J-LINK</p>
+<p><a class="reference external" href="https://www.segger.com/products/debug-probes/j-link/models/j-link-edu-mini/">J-Link</a>
+EDU Mini</p>
+<p>Consumes:</p>
+<ul class="simple">
+<li><p>SWDIO</p></li>
+<li><p>SWCLK</p></li>
+<li><p>RES connection to S128 MCU</p></li>
+<li><p>TDO and TDI are unused</p></li>
+</ul>
+<p>NOTE: the JLINK_OB/JTAG circuit in the DK-S128 uses U12 (a MCU) and U10B
+(tri-state buffer) to translate USB to SWD. U12 receives USB
+communication and bitbangs data through U10B to the SWD pins of the
+board’s MCU. This does not need to be replicated.</p>
+</section>
+<section id="rgb-led">
+<h3>RGB LED<a class="headerlink" href="#rgb-led" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/155124M173200/7315806">https://www.digikey.com/en/products/detail/würt</a>
+<a class="reference external" href="https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/155124M173200/7315806">h-elektronik/155124M173200/7315806</a></p>
+<p>GPIO drive strength (excluding P000-P004, P010-P015, P212, P213,
+P500-P502, P408, P409, P914, P915) is +/- 4 mA for low drive, +/- 8 mA
+for high drive.</p>
+<p><img alt="image4" src="../../_images/_page_3_Figure_4.jpeg" /></p>
+<p>Onboard JTAG connection</p>
+<p>Desired thru current: 3 mA or less when powered from 3V3 rail and sunk
+into MCU GPIO.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Color</p></th>
+<th class="head"><p>ForwardVoltage(V)</p></th>
+<th class="head"><p>Resistor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Red</p></td>
+<td><p>2.0</p></td>
+<td><p>1kOhm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Green</p></td>
+<td><p>2.8</p></td>
+<td><p>750Ohm</p></td>
+</tr>
+<tr class="row-even"><td><p>Blue</p></td>
+<td><p>3.0</p></td>
+<td><p>666Ohm</p></td>
+</tr>
+</tbody>
+</table>
+<p>For simplicity’s sake, using 1 kOhm for each of these. Can adjust thru
+current based on user feedback.</p>
+</section>
+<section id="piezo">
+<h3>Piezo<a class="headerlink" href="#piezo" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://www.digikey.com/en/products/detail/mallory-sonalert-products-inc/PK-11N40PQ/4996072">https://www.digikey.com/en/products/detail/mallory-sonalert</a><a class="reference external" href="https://www.digikey.com/en/products/detail/mallory-sonalert-products-inc/PK-11N40PQ/4996072">products-inc/PK-11N40PQ/4996072</a></p>
+<p>The piezo drive current should be delivered by a MOSFET instead of a
+GPIO. A cheap SOT23-3 FET, capable of handling VGS = 3V was selected. It
+should be on the low side since the MCU GPIO will only reach 3V.</p>
+<p><img alt="image5" src="../../_images/_page_3_Figure_12.jpeg" /></p>
+</section>
+<section id="power-1">
+<span id="id1"></span><h3>Power<a class="headerlink" href="#power-1" title="Link to this heading">¶</a></h3>
+<p>Remainder of board</p>
+<p>Powering with a controllable 3V3 LDO.</p>
+<p><img alt="image6" src="../../_images/_page_4_Figure_0.jpeg" /></p>
+<section id="mcu-power">
+<h4>MCU Power<a class="headerlink" href="#mcu-power" title="Link to this heading">¶</a></h4>
+<p>To provide a stable power rail for the MCU analog blocks (ADC is this
+project’s concern), a</p>
+<p><img alt="image7" src="../../_images/_page_4_Figure_3.jpeg" /></p>
+<p>used on board. The chosen LDO, TPS70933DBVR, recommends using a 1u
+ceramics at IN and a 2.2u ceramic at Vout.</p>
+<p>An internal pull-up circuit sets the default of enable to active.</p>
+<p>A TLV431 can be populated onboard to provide the ADC with a reference
+more stable than the MCU’s internal reference.</p>
+</section>
+<section id="reference-voltage">
+<h4>Reference voltage<a class="headerlink" href="#reference-voltage" title="Link to this heading">¶</a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>TEST
+C
+ONDITIONS</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>T
+L
+V
+4
+3
+1
+A</p></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>PARAMETER</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>T
+Y
+P</p></td>
+<td><p>M
+A
+X</p></td>
+<td><p>U
+N
+I
+T</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>T A =
+25°C</p></td>
+<td></td>
+<td><p>2
+2
+8</p></td>
+<td><p>2
+4</p></td>
+<td><p>2
+5
+2</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>B ( )</p></td>
+<td><p>V KA = V REF ,</p></td>
+<td><ol class="arabic simple">
+<li></li>
+</ol>
+</td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+C</p></td>
+<td><p>2
+2
+1</p></td>
+<td></td>
+<td><p>2
+5
+9</p></td>
+<td><p>v</p></td>
+</tr>
+<tr class="row-odd"><td><p>VREF</p></td>
+<td><p>Reference
+voltage</p></td>
+<td><p><span class="math notranslate nohighlight">\(I
+_{\rm K} = 10 \text{ mA}\)</span></p></td>
+<td><p>T A =
+full
+range
+(1)(see
+Figure
+22)</p></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+I</p></td>
+<td><p>2
+1
+5</p></td>
+<td></td>
+<td><p>2
+6
+5</p></td>
+<td><p>v</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>(see
+rigule
+zz)</p></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+Q</p></td>
+<td><p>2
+0
+9</p></td>
+<td></td>
+<td><p>2
+7
+1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+C</p></td>
+<td></td>
+<td><p>4</p></td>
+<td><p>1
+2</p></td>
+<td><p>m
+V</p></td>
+</tr>
+<tr class="row-even"><td><p>V
+REF(
+dev)</p></td>
+<td><p>F(dev) V REF
+deviation
+over
+ful
+ltemperature
+range (2)</p></td>
+<td><p>V KA = V REF , I K = 10
+mA (1)(see Figure 22)
+TLV431AI</p></td>
+<td></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+I</p></td>
+<td></td>
+<td><p>6</p></td>
+<td><p>2
+0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>temperature
+range</p></td>
+<td></td>
+<td><p>(see
+Figure
+22)
+TLV431AQ</p></td>
+<td></td>
+<td></td>
+<td><p>1
+1</p></td>
+<td><p>3
+1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>:ma
+th:`
+Del
+ta V
+_{RE
+F}`</p>
+<blockquote>
+<div><p>:</p>
+</div></blockquote>
+<p>math
+:<a href="#id2"><span class="problematic" id="id3">`</span></a>D
+elta</p>
+<blockquote>
+<div><p>V_{</p>
+</div></blockquote>
+<p>KA}`</p>
+</td>
+<td><p>Ratio of V
+REF change
+in
+ca
+thodevoltage
+change</p></td>
+<td><p>:math:<a href="#id4"><span class="problematic" id="id5">`</span></a>label{eq:VKA} be
+gin{split} V_{KA} &amp;= V_{R
+EF} text{ to } 6 text
+{V}, text{I}_{K} = 10
+text{mA} \ (text{see</p>
+<blockquote>
+<div><p>Figure 23}) end{split}`</p>
+</div></blockquote>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+<p>5</p>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+<p>7</p>
+</td>
+<td><p>m
+V
+/
+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Iret</p></td>
+<td><p>Reference
+terminal
+current</p></td>
+<td><p>I K = 10 mA, R1 = 10
+kΩ,R2 = open(see Figure
+23)</p></td>
+<td></td>
+<td></td>
+<td><p>1
+5</p></td>
+<td><p>5</p></td>
+<td><p>μ
+Α</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>Lu = 10 mA P1 = 10 k0</p></td>
+<td></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+C</p></td>
+<td></td>
+<td><p>0
+5</p></td>
+<td><p>3</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>ref(
+dev)</p></td>
+<td><p>I ref
+deviation
+over full
+temp
+eraturerange
+(2)</p></td>
+<td></td>
+<td></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+I</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>μ
+Α</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Tange</p></td>
+<td></td>
+<td><p>(ace
+rigure
+20)</p></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+Q</p></td>
+<td></td>
+<td><p>1
+5</p></td>
+<td><p>5</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Minimum
+cathode
+current for</p></td>
+<td></td>
+<td><p>E: 000</p></td>
+<td><p>T
+L
+V
+4
+3
+1
+A
+C
+/
+A
+I</p></td>
+<td></td>
+<td><p>5
+5</p></td>
+<td><p>8
+0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>K(
+min)</p></td>
+<td><p>regulation</p></td>
+<td><p>VKA = VREF (S</p></td>
+<td><p>KA = V
+REF (see
+Figure
+22)
+TLV431AQ</p></td>
+<td></td>
+<td></td>
+<td><p>5
+5</p></td>
+<td><p>1
+0
+0</p></td>
+<td><p>μ
+A</p></td>
+</tr>
+<tr class="row-odd"><td><p>K(
+ott)</p></td>
+<td><p>Off-state
+cathode
+current</p></td>
+<td><p>:m
+ath:<cite>V_{REF} = 0, V_{KA}</cite></p></td>
+<td><p>= 6 V
+(see
+Figure 24</p></td>
+<td><p>)</p></td>
+<td></td>
+<td><p>0
+0
+1</p></td>
+<td><p>1</p></td>
+<td><p>μ
+Α</p></td>
+</tr>
+<tr class="row-even"><td><p>z KA</p></td>
+<td><p>Dynamic
+impedance
+(3)</p></td>
+<td><p><span class="math notranslate nohighlight">\(V_{KA} = V_{REF}\)</span>
+, f <span class="math notranslate nohighlight">\(\leq\)</span> 1 kHz,
+<span class="math notranslate nohighlight">\(I_K = 0.1\)</span> mA to
+15 mA(see Figure 22)</p></td>
+<td></td>
+<td></td>
+<td><p>2
+5</p></td>
+<td><p>4</p></td>
+<td><p>Ω</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://www.ti.com/lit/ds/symlink/tlv431a.pdf">https://www.ti.com/lit/ds/symlink/tlv431a.pdf</a></p>
+<div class="math notranslate nohighlight">
+\[V_{O} = (1 + R1 / R2) \times V_{ref} - I_{ref} \times R1\]</div>
+<p><img alt="image8" src="../../_images/_page_4_Figure_11.jpeg" /></p>
+<p><a class="reference external" href="https://www.ti.com/lit/ds/symlink/tlv431a.pdf">https://www.ti.com/lit/ds/symlink/tlv431a.pdf</a></p>
+<p><a class="reference external" href="https://www.ti.com/lit/ds/symlink/tlv431a.pdf">https://www.ti.com/lit/ds/symlink/tlv431a.pdf</a> section 9.2.2.2.1</p>
+<p>The recommended cathode current ranges [0.1, 15] mA with an absolute
+maximum of 20 mA. A 180 ohm R_{SUP} will pass ~9.2 mA.</p>
+<p>In the typical case, V_{ref} = 1.24 V, I_{ref} = 0.15 uA. This circuit
+will not be powered while the SBS is sleeping, so lower resistor values
+can be used for better noise immunity. Let R1 = 10 kOhm, so R2 = 30
+kOhm. With these resistor values, the actual nominal V_O is ~1.65183 V.</p>
+</section>
+</section>
+<section id="tlv431-output-voltage">
+<h3>TLV431 Output <a class="reference external" href="https://www.desmos.com/calculator/qap5we216u">Voltage</a><a class="headerlink" href="#tlv431-output-voltage" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>V_{
+O}Corner</p></th>
+<th class="head"><p>Conditions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Low</p></td>
+<td><p>MinimumR1,maximumR2,minimumV_{ref},maximumI_{ref}</p></td>
+</tr>
+<tr class="row-odd"><td><p>High</p></td>
+<td><p>MaximumR1,minimumR2,maximumV_{ref},minimumI_{ref}(zero)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ResistorValues</p></th>
+<th class="head"><p>Tol
+erances</p></th>
+<th class="head"><p>V
+_{O,MIN}(V)</p></th>
+<th class="head"><p>V
+_{O,MAX}(V)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R110k,R230k==</p></td>
+<td><p>1%</p></td>
+<td><p>1.6243</p></td>
+<td><p>1.6778</p></td>
+</tr>
+<tr class="row-odd"><td><p>R110k,R230k==</p></td>
+<td><p>0.1%</p></td>
+<td><p>1.6315</p></td>
+<td><p>1.6702</p></td>
+</tr>
+<tr class="row-even"><td><p>R11k,R23k==</p></td>
+<td><p>1%</p></td>
+<td><p>1.6287</p></td>
+<td><p>1.6778</p></td>
+</tr>
+<tr class="row-odd"><td><p>R11k,R23k==</p></td>
+<td><p>0.1%</p></td>
+<td><p>1.6360</p></td>
+<td><p>1.6702</p></td>
+</tr>
+</tbody>
+</table>
+<p>The largest contributor to the accuracy of the output voltage is the
+accuracy of the V_{ref} signal produced inside the TLV431.</p>
+<p>The resistor values and tolerances can be changed independent of the
+rest of the SBS hardware.</p>
+<p>Using a precise external voltage reference reduces the uncertainty of
+the reference to under +/- 2% from +/- 10%.</p>
+<p>ADC Input Clamping</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Input
+voltage</p></th>
+<th class="head"><p>5 V tolerant ports*1</p></th>
+<th class="head"><p>V in</p></th>
+<th class="head"><p>-0.3 to
++6.5</p></th>
+<th class="head"><p>V</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>P000 to P004P010 to P015P500
+to P502</p></td>
+<td><p>V in</p></td>
+<td><p>-0.3 to
+AVCC0 + 0.3</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Others</p></td>
+<td><p>V in</p></td>
+<td><p>-0.3 to VCC
++ 0.3</p></td>
+<td><p>V</p></td>
+</tr>
+</tbody>
+</table>
+<p>S128 Datasheet section 2.1 (Absolute Maximum Ratings)</p>
+<p>Consulting the S128 User Manual section 1.7 (Pin Lists) shows the ports
+related to AVCC0 are ADC inputs AN000 through AN013.</p>
+<p>From the of this page, AVCC0 = 3.3 V. An arbitrary upper limit can be
+set to voltages input to ADC channels of 3 V with a zener diode and a
+currentlimiting resistor. Analog Power
+<a class="reference external" href="https://aerpaw-uav.atlassian.net/wiki/spaces/VD/pages/182681698/SBS+Design#Analog-Power">section</a></p>
+<p>This circuit should be used for every ADC input that can theoretically
+exceed 3.3 V (e.g. Cell Voltage Difference Amplifiers).</p>
+<p>From Smart Battery System |
+<a class="reference external" href="https://aerpaw-uav.atlassian.net/wiki/spaces/VD/pages/164331521/Smart+Battery+System#Modeling-ADC-inputs">Modeling</a>
+ADC inputs , the ADC input resistance is on the order of kOhm and input
+capacitances on the order of pF. The current-limiting resistor should be
+adequately sized to limit worst-case current through the zener diode
+based on the analog voltage’s driving capability (but no more than 100
+mW dissipated, so 33 mA limit).</p>
+</section>
+</section>
+<section id="detect-signal">
+<h2>Detect Signal<a class="headerlink" href="#detect-signal" title="Link to this heading">¶</a></h2>
+<p>Detect_IN is connected to P106 (AN016), which is tolerant up to VCC.
+Detect_OUT , driven by a GPIO, can supply up to 4 mA in low drive mode
+at 3V. Thus, the series resistance can be no less than 750 Ohms.</p>
+<p>For the given resistor divider, Rx is the Connected resistor. The high
+and low side resistors limit the max current and</p>
+<p>allows for Rx to be smaller than if only the low-side resistor limited
+the current.</p>
+<p>Rx = RL * (Vin/Vout - 1) - RH</p>
+<p>Rx = 470 * (3/Vout - 1) - 470</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>VoltageMin(V)</p></th>
+<th class="head"><p>VoltageMax(V)</p></th>
+<th class="head"><p>RxNominal</p></th>
+<th class="head"><p>C
+losestE24</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Nohost</p></td>
+<td><p>0</p></td>
+<td><p>0.1</p></td>
+<td><p>None/open</p></td>
+<td><p>Open</p></td>
+</tr>
+<tr class="row-odd"><td><p>1
+2Sdrone</p></td>
+<td><p>0.2</p></td>
+<td><p>0.3</p></td>
+<td><p>4.7k</p></td>
+<td><p>4.7k</p></td>
+</tr>
+<tr class="row-even"><td><p>6Sdrone</p></td>
+<td><p>0.4</p></td>
+<td><p>0.5</p></td>
+<td><p>2.1933k</p></td>
+<td><p>2.2k</p></td>
+</tr>
+<tr class="row-odd"><td><p>R
+eserved</p></td>
+<td><p>0.6</p></td>
+<td><p>1.1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Charger</p></td>
+<td><p>1.2</p></td>
+<td><p>3</p></td>
+<td><p>Short</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="thermistor">
+<h1>Thermistor<a class="headerlink" href="#thermistor" title="Link to this heading">¶</a></h1>
+<p>Create a resistor divider with the thermistor as the low leg and a fixed
+R as the top leg.</p>
+<p><img alt="image9" src="../../_images/_page_6_Figure_12.jpeg" /></p>
+<p><img alt="image10" src="../../_images/_page_6_Figure_13.jpeg" /></p>
+<section id="ntcle413e2103h401-datasheet">
+<h2><a class="reference external" href="https://www.vishay.com/docs/29078/ntcle413.pdf">NTCLE413E2103H401</a> datasheet<a class="headerlink" href="#ntcle413e2103h401-datasheet" title="Link to this heading">¶</a></h2>
+</section>
+<section id="ntc-thermistor">
+<h2>NTC <a class="reference external" href="https://www.desmos.com/calculator/jdfhc9kqfy">Thermistor</a><a class="headerlink" href="#ntc-thermistor" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Resistor pole powered by 3V3</p></li>
+<li><p>Maximum readable voltage is 1.3 V (minimum Vref internal)</p></li>
+<li><p>Minimum readable voltage assume is 50 mV</p></li>
+<li><p>With RH = 56k and the given thermistor, able to resolve temperatures
+in range [-1.2, 91] °C</p>
+<ul>
+<li><p>Generally, lowering RH shifts the readable range more negative and
+raising RH shifts it more positive</p></li>
+</ul>
+</li>
+</ul>
+<section id="cell-stack-and-output-voltage-measurement">
+<h3>Cell, Stack, and Output Voltage measurement<a class="headerlink" href="#cell-stack-and-output-voltage-measurement" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Max cell voltage expected is 4.3 V → round up to 4.4 V</p></li>
+<li><p>Max expected voltage on either pin (for 6S compatibility) is ( 6 cell</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="mf">4.4</span> <span class="n">V</span><span class="o">/</span><span class="n">cell</span> <span class="o">=</span> <span class="mf">26.8</span> <span class="n">V</span> <span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>V_{out} = V_{ref} and V_{in} = 26.8 V</p></li>
+<li><p>Using internal reference, V_{ref_internal,min} = 1.30 V</p>
+<ul>
+<li><p>Ratio = 1.3/26.8</p></li>
+<li><p>Approximate match: RL = 510, RH = 10k</p></li>
+<li><p>To limit current, use RL = 51k, RH = 1Meg to limit thru current to
+~84 uA (for all cells)</p>
+<ul>
+<li><p>Since V1 of SBS uses resistor poles for cell measurement, too,
+the voltage for cell 6 is also the same as the stack voltage,
+so the pole for the stack can be removed</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Using external reference, VREFH0_{min} = 1.60 V (rounded)</p>
+<ul class="simple">
+<li><p>RL = 750, RH = 24k for a divide ratio of 0.030303030 (inverse is
+33.0)</p></li>
+<li><p>Scale to RL = 75k and RH = 2.4M to reduce thru current to 52.8 uA</p></li>
+</ul>
+<p>Cell Voltage Difference Amplifiers (deprecated for V1 of SBS)</p>
+<p><img alt="image11" src="../../_images/_page_7_Picture_21.jpeg" /></p>
+<p><img alt="image12" src="../../_images/_page_7_Figure_22.jpeg" /></p>
+<p>Example cell measurement resistor pole</p>
+<p>If this SBS is to be converted to support 12 cell batteries, this entire
+block must be revised (OPAx990 max supply voltage is 40 V) and
+current-limiting R based on 6-cell maximum.</p>
+<p>A Deeper Look into
+<a class="reference external" href="https://www.analog.com/en/analog-dialogue/articles/deeper-look-into-difference-amplifiers.html">Difference</a>
+Amplifiers | Analog Devices</p>
+<ul class="simple">
+<li><p>Shutdown pins (SHDN) on the OPA4990S use logic levels</p>
+<ul>
+<li><p>Open is pulled down internally to logic low, so must input a high
+to shutdown</p></li>
+<li><p>SHDN pin cannot exceed (V-) + 20V or (V+) (whichever is lower)</p></li>
+</ul>
+</li>
+<li><p>Resistor dividers</p>
+<ul>
+<li><p>Max cell voltage expected is 4.3 V → round up to 4.4 V</p></li>
+<li><p>Must scale down by V_{ref}/4.4 = (R2/R1) (taken from the Op Amp
+circuit shown)</p>
+<ul>
+<li><p>Note that R1 = R3 and R2 = R4</p></li>
+</ul>
+</li>
+<li><p>Using internal reference, V_{ref_internal,min} = 1.30 V</p>
+<ul>
+<li><p>R2/R1 = 1.30/4.4 <sub>=</sub> 2.7/9.1</p></li>
+</ul>
+</li>
+<li><p>Using external reference, VREFH0_{min} = 1.60 V (rounded)</p>
+<ul>
+<li><p>R2/R1 = 1.60/4.4 = 1.2/3.3 (both are E24 numbers)</p></li>
+<li><p>* This is what is used on V1 of the 6S SBS *</p></li>
+</ul>
+</li>
+<li><p>Problem: as long as a battery is plugged in, the path from V2 to
+GND conducts current</p>
+<ul>
+<li><p>Keep R on the order of 100k-1M to keep this small</p></li>
+<li><p>Alternative: add a low current FET (~20 mA or higher) between
+R4 and GND. Enable only when taking ADC measurements. Size R on
+the order of 1k or 10k to improve noise immunity since this
+path is closed most of the time.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Voltage clamp</p>
+<ul>
+<li><p>Must limit output to 3 V with zener</p></li>
+<li><p>Highest expected stack voltage is (6 cell * 4.2 V = 25.2 V)</p></li>
+</ul>
+</li>
+</ul>
+<p>OPA4990 short-circuit current limit (per amplifier)</p>
+<p><img alt="image13" src="../../_images/_page_8_Figure_22.jpeg" /></p>
+<div class="math notranslate nohighlight">
+\[V_{OUT} = \left(\frac{R4}{R3 + R4}\right) \times \left(\frac{RI + R2}{RI}\right) \times V2 - \frac{R2}{RI} VI\]</div>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<p>Four resistor Op Amp circuit Note the - input is above the + input</p>
+<ul class="simple">
+<li><p>Current-limiting resistor shall limit this to 30 mA to not exceed the
+(arbitrarily chosen) 100 mW zener diode limit → 740 Ohm → 1 kOhm can
+be used as a current limit</p>
+<ul>
+<li><p>This situation likely won’t happen since the amplifier would need
+to be driving 25.2 V for (25.2 - 3) V to appear across the 1k, but
+this is a worst-case-make-sure-nothing-breaks spec</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="fet-array-and-gate-driver">
+<h2>FET Array and Gate Driver<a class="headerlink" href="#fet-array-and-gate-driver" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>LTC7000 is a high-side N-channel MOSFET gate driver</p></li>
+<li><p>This implementation will ignore many features of the LTC7000,
+somewhat treating it as if it were the LTC7000-1</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>P
+i
+n</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Connection</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R
+U
+N</p></td>
+<td><p>ActivehighChi
+pEnablepin.Iflogiclow,LTC7000entersashutdow
+nmode.ThismustbeactiveforINPtohaveaneffect.</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>I
+N
+}</p></td>
+<td><p>Chipmainsupplypin.</p></td>
+<td><p>Yes,usea0
+.1uFceramictodecouple</p></td>
+</tr>
+<tr class="row-even"><td><p>C
+C
+}</p></td>
+<td><p>InternalL
+DOoutputforgatedriversandinternalcircuitry.</p></td>
+<td><p>Yes,usea1.0uFlowES
+Rceramictodecouple.Do
+n’tuseforanythingelse</p></td>
+</tr>
+<tr class="row-odd"><td><p>C
+C
+U
+V
+}</p></td>
+<td><p>Setsth
+eUVLOfortheGateDrive(V_{CC})pin.ShorttoGND
+setsUVLOto3.5V(minimum),opensetsUVLOto7.0V.</p></td>
+<td><p>Tominimizeopportunity
+forthegatedrivertocut
+offpower,theUVLOshoul
+dbeminimized,soV_{CC
+UV}willbeshortedtoGND</p></td>
+</tr>
+<tr class="row-even"><td><p>F
+A
+U
+L
+T
+}</p></td>
+<td><p>Open
+DrainFaultOutput-usedtonotifyofanimpendingF
+ETturnoffasaresultofanovercurrentcondition.</p></td>
+<td><p>Noconnect</p></td>
+</tr>
+<tr class="row-odd"><td><p>T
+I
+M
+E
+R</p></td>
+<td><p>“IftheTIMERpinisconnectedtoVCC
+oranyothersupplygreaterthan3.5V(absmax15V),
+anovercurrenteventwillimmediatelypullTGDNto
+TSandtheLTC7000/LTC7000-1willremainthereunt
+iltheINPsignalhascycledlowandthenbackhigh.”</p></td>
+<td><p>ConnecttoVCCsincei
+tisnotpossibleforanov
+ercurrenteventtoarise</p></td>
+</tr>
+</tbody>
+</table>
+<section id="ltc7000-pinout">
+<h3>LTC7000 Pinout<a class="headerlink" href="#ltc7000-pinout" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>I
+N
+P</p></th>
+<th class="head"><p>Gatedriveenablepin.Fastswitch
+ingofthegatedriverstate.RUNmustbe
+activeforthisinputtohaveaneffect.</p></th>
+<th class="head"><p>Yes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>O
+V
+L
+O</p></td>
+<td><p>Overvoltagelockoutinput.</p></td>
+<td><p>No-“tiedtoGNDwhennotused”</p></td>
+</tr>
+<tr class="row-odd"><td><p>S
+E
+T
+}</p></td>
+<td><p>Setsth
+eovercurrentthresholdmeasuredbyth
+eshuntresistor(acrossSNS+toSNS-pi
+ns).Leaveopenforathresholdof30mV.</p></td>
+<td><p>SNS+andSNS-willh
+ave0Vdifference,sothiscanbel
+eftopentosetathresholdof30mV</p></td>
+</tr>
+<tr class="row-even"><td><p>M
+O
+N
+}</p></td>
+<td><p>SNS+SNS-Voltageoutput=20(-).*</p></td>
+<td><p>Noconnect</p></td>
+</tr>
+<tr class="row-odd"><td><p>T
+G
+D
+N</p></td>
+<td><p>Gatedrivepulldown.</p></td>
+<td><p>Connectdirectl
+ytoFETgateforfastestturn-off</p></td>
+</tr>
+<tr class="row-even"><td><p>T
+G
+U
+P</p></td>
+<td><p>Gatedrivepullup.</p></td>
+<td><p>Co
+nnectdirectlytoFETgateforfas
+testturn-on;connectthroughre
+sistortocontrolinrushcurrent</p></td>
+</tr>
+<tr class="row-odd"><td><p>T
+S</p></td>
+<td><p>FETsourceconnection.</p></td>
+<td><p>ConnectdirectlytoFETsources</p></td>
+</tr>
+<tr class="row-even"><td><p>B
+S
+T</p></td>
+<td><p>High-sidebootstrapsupply.Voltage
+swingonthispinis12VtoV_{IN}+12V.</p></td>
+<td><p>Connec
+ttoTSthroughaminimum0.1uFcap</p></td>
+</tr>
+<tr class="row-odd"><td><p>S
+N
+S
+-
+a
+n
+d
+S
+N
+S
++</p></td>
+<td><p>Currentsensecomparatorinput.Des
+iredinputvoltagerangeis3.5to150V.</p></td>
+<td><p>Donotco
+nnectacrossashuntresistorIns
+tead,connectbothterminalstot
+hedrainofthebattery-sideFETs</p></td>
+</tr>
+<tr class="row-even"><td><p>G
+N
+D
+(
+E
+P
+A
+D
+)</p></td>
+<td><p>Groundpad.</p></td>
+<td><p>So
+lderdirectlytoPCBforratedele
+ctricalandthermalperformance</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="limit-inrush-current">
+<h3>Limit Inrush Current<a class="headerlink" href="#limit-inrush-current" title="Link to this heading">¶</a></h3>
+<p>The turn-on time is controlled by C_G and R_G (both are external
+components we get to choose). The load capacitance is something we
+estimate. The 10 Ohm resistor can be low power - it’s meant to dampen
+oscillations.</p>
+</section>
+<section id="dont-need-to-limit">
+<h3>Don’t need to limit<a class="headerlink" href="#dont-need-to-limit" title="Link to this heading">¶</a></h3>
+<p><img alt="image14" src="../../_images/_page_11_Figure_2.jpeg" /></p>
+<section id="reverse-current-protection-aka-load-switching">
+<h4>Reverse Current Protection (aka “load switching”)<a class="headerlink" href="#reverse-current-protection-aka-load-switching" title="Link to this heading">¶</a></h4>
+<p>Just as a reference, this is how the shunt terminals should be connected
+in case of back-to-back FETs</p>
+<p><img alt="image15" src="../../_images/_page_11_Figure_7.jpeg" /></p>
+</section>
+<section id="flyback-diode-connection-to-ts">
+<h4>Flyback diode connection to TS<a class="headerlink" href="#flyback-diode-connection-to-ts" title="Link to this heading">¶</a></h4>
+<p>The Schottky (for fast turn-on) should be rated for at least 25.2 V (6
+cell * 4.2 V) → around 50 V or higher for a safety factor.</p>
+<p>This diode should not be tiny since it will need to handle (0.7 V)(~10
+A) for a short time in the worst case. Since the gate driver won’t cut
+off while drone is mid-flight, it would be on the ground. The ideal
+diode max tolerable current is 10 A, so assume all the current is
+flowing through the FET array.</p>
+<p>Choose a schottky in a DPAK/TO-252-3 package so they can be easily
+swapped.</p>
+<p><img alt="image16" src="../../_images/_page_11_Figure_15.jpeg" /></p>
+</section>
+</section>
+<section id="current-amplifiers">
+<h3>Current Amplifiers<a class="headerlink" href="#current-amplifiers" title="Link to this heading">¶</a></h3>
+<p>Shunt resistance R_{shunt} = 300 uOhm</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>F
+eat
+ure</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ac
+cur
+acy</p></td>
+<td><p>V_{os}=R_{shunt}*OpAmpOffsetVoltage:I_{inaccuracy}</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>R_{shunt}=300uOhmI_{inaccuracy}=V_{os}/For,(300uOhm)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>V_{os}=+-</p></th>
+<th class="head"><p>12uV→</p></th>
+<th class="head"><p>I
+_{inac
+curacy}</p></th>
+<th class="head"><p>=(12</p></th>
+<th class="head"><p>uV
+)/</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>(3
+00</p></td>
+<td><p>uOhm)</p></td>
+<td><p>=40mA</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Co
+mmo
+n-m
+ode</p></td>
+<td></td>
+<td><p>Common-mode</p></td>
+<td><p>inputrange=</p></td>
+<td><p>[-0
+.2,40]V</p></td>
+<td><p>hi
+gh-s
+ide→</p></td>
+<td><p>c
+on
+fi
+gf
+or</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>V_{stack}</p></td>
+<td><p>&lt;40V</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Dif
+fer
+ent
+ial</p></td>
+<td></td>
+<td><p>Diff
+erentialmay</p></td>
+<td><p>bewithin+/-42V</p></td>
+<td><p>canr
+eadthe→</p></td>
+<td><p>for
+ward
+/rev
+erse</p></td>
+<td><p>c
+ur
+re
+nt</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>m
+axi
+mum</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Lo
+we
+st</p></td>
+<td><p>gain(25)</p></td>
+<td><p>saturates(above</p></td>
+<td><p>ADCVref
+=1.45V)</p></td>
+<td><p>at~1
+92A.</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ou
+tpu
+tsw
+ing</p></td>
+<td><p>T
+he
+0V</p></td>
+<td><p>ou
+tputvoltage
+whenreading</p></td>
+<td><p>canonlyswingc
+urrentofopposite</p></td>
+<td><p>betwe
+enGNDpo
+larity)</p></td>
+<td><p>and
+VS(w
+on’t</p></td>
+<td><p>ou
+tp
+ut</p></td>
+<td><p>b
+e
+l
+o
+w</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image17" src="../../_images/_page_13_Figure_0.jpeg" /></p>
+</section>
+</section>
+</section>
+<section id="ideal-diode">
+<h1>Ideal Diode<a class="headerlink" href="#ideal-diode" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Must enable load switching and inrush control</p></li>
+<li><p>* Using same FETs for ideal diode as for FET array on V1 of 6S SBS
+*</p></li>
+</ul>
+<p>Feature Par ts Notes</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>B
+a
+r
+e
+M
+i
+n
+i
+m
+u
+m</p></th>
+<th class="head"><p>Q
+1</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>L
+o
+a
+d
+S
+w
+i
+t
+c
+h
+i
+n
+g</p></td>
+<td><p>Q
+2
+,
+R
+3</p></td>
+<td><p>R3preventsQ2parasiticoscillations</p></td>
+</tr>
+<tr class="row-odd"><td><p>I
+n
+r
+u
+s
+h
+c
+o
+n
+t
+r
+o
+l
+(
+a
+k
+a
+“
+s
+o
+f
+t
+s
+t
+a
+r
+t
+i
+n
+g
+”
+)</p></td>
+<td><p>C
+1
+,
+R
+4</p></td>
+<td><p>ForR4being10kOhm,theinrushcurrentisdescribedbytheeq
+uationbelow,whereC_{LOAD}istheestimatedworstcaseloadcapacita
+ncethatthiscircuitisexpectedtodrive.Theidealdiodeinrushcurren
+tshouldbelimitedto10Aandtheloadcapacitanceworst-caseisapproxi
+mately6000uF.ThissetsC1to6nFexactly,buttheclosestcapvaluegrea
+terthanthisis6.8nF,whichsetstheinrushto8.82A.Asmallervalueisn
+otusedtoavoidexceedingthe10Ainrushcurrentrequirement.REVIEWME</p></td>
+</tr>
+<tr class="row-even"><td><p>R
+e
+v
+e
+r
+s
+e
+r
+e
+c
+o
+v
+e
+r
+y
+v
+o
+l
+t
+a
+g
+e
+s
+p
+i
+k
+e
+s</p></td>
+<td><p>D
+1
+,
+R
+1
+,
+D
+2
+,
+C
+O
+U
+T
+,
+D
+4</p></td>
+<td><p>Fromcommutation(switching),reverserecoveryspikescanbeseeno
+nOUT,IN,andSOURCE.Unlikethedatasheet,the“inputshortcircuit”co
+nditioniscan’toccurbecausethebatteryisnotdisconnectedwhensupp
+lyingpowernorwouldashortappearacrossthebatteryinputterminals.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The ideal diode will also be supplying a current on the order of 0.5 A
+to several amps. The gate ramp set up by C1 and R4 will prevent large
+inrush currents.</p>
+<p>The greatest load step cases are when first enabling the ideal diode and
+disconnecting the load. Because the supply current is small, inductive
+kickbacks will be as well.</p>
+<p>D1 protects IN and SOURCE during load steps and overvoltage conditions.
+The only power source to be used by the 6S SBS is a 6-cell battery (4.2
+V/cell), so overvoltage protection is not needed. The small supply
+current and inrush control will mitigate the load step voltage spikes,
+so this feature isn’t required either.</p>
+<p>D2 blocks conduction for a range reverse input voltages caused by
+reverse recovery. Because of the small current supply, these spikes are
+being ignored.</p>
+<p>“If reverse input protection and fast turn off time are not required, R1
+can be removed and VSS connected to system ground.” COUT is also meant
+to preserve fast turn-off times and absorbing reverse recovery energy.
+Both of these components are being omitted.</p>
+<p>D4 prevents VGS from increasing in case of a negative spike on IN or
+SOURCE. These spikes are being ignored because they are expected to be
+small.</p>
+<p>If this SBS is to be converted to support 12 cell batteries, including
+components described in this section is strongly encouraged.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Smart Battery System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../lam6/index.html" class="btn btn-neutral float-right" title="VD Smart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, AERPAW.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

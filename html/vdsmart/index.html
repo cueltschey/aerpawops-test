@@ -1,0 +1,1393 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Battery System &mdash; AERPAW Operators Manual 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/js/hoverxref.js"></script>
+      <script src="../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../_static/js/micromodal.min.js"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SBS Design" href="VD-SBSDesign/index.html" />
+    <link rel="prev" title="AERPAW Operators Manual" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AERPAW Operators Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">VD Smart</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Smart Battery System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#todo-list">TODO List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-notes">Software Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mcu-notes">MCU Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pin-mappings">Pin Mappings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#can-communication">CAN Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analog-voltages-adc">Analog Voltages / ADC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#s128-user-manual-table-46-49">S128 User Manual Table 46.49</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#low-power-modes">Low Power Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VD-SBSDesign/index.html">SBS Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VD-SBSDesign/index.html#the-pcb-is-done-in-mm-not-mil">The PCB is done in mm (not mil)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#mcu-connections">MCU Connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#system-control">System control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#power">Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#s128-datasheet-table-2-1">S128 datasheet Table 2.1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#clocks">Clocks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#selecting-crystal-oscillator-load-capacitors">Selecting crystal oscillator load capacitors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#serial-wire-debug">Serial Wire Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#rgb-led">RGB LED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#piezo">Piezo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#power-1">Power</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#mcu-power">MCU Power</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#reference-voltage">Reference voltage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#tlv431-output-voltage">TLV431 Output Voltage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VD-SBSDesign/index.html#detect-signal">Detect Signal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VD-SBSDesign/index.html#thermistor">Thermistor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VD-SBSDesign/index.html#ntcle413e2103h401-datasheet">NTCLE413E2103H401 datasheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VD-SBSDesign/index.html#ntc-thermistor">NTC Thermistor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#cell-stack-and-output-voltage-measurement">Cell, Stack, and Output Voltage measurement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VD-SBSDesign/index.html#fet-array-and-gate-driver">FET Array and Gate Driver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#ltc7000-pinout">LTC7000 Pinout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#limit-inrush-current">Limit Inrush Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#dont-need-to-limit">Don’t need to limit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#reverse-current-protection-aka-load-switching">Reverse Current Protection (aka “load switching”)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VD-SBSDesign/index.html#flyback-diode-connection-to-ts">Flyback diode connection to TS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VD-SBSDesign/index.html#current-amplifiers">Current Amplifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VD-SBSDesign/index.html#ideal-diode">Ideal Diode</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">LAM6</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lam6/index.html">VD Smart</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AERPAW Operators Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Smart Battery System</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="smart-battery-system">
+<h1>Smart Battery System<a class="headerlink" href="#smart-battery-system" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/AERPAW/sbs">https://github.com/AERPAW/sbs</a></p>
+<section id="todo-list">
+<h2>TODO List<a class="headerlink" href="#todo-list" title="Link to this heading">¶</a></h2>
+<ul>
+<li><ol class="arabic simple">
+<li><p>Convert text description of behavioral flowchart to a
+diagram/picture</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Determine what resistors to use for voltage diff amps</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Determine if ideal diode FETs are same as those in the
+high-current FET array</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Map MCU pins to board functions</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Determine if MCU GPIOs go high impedance when MCU goes to sleep</p></li>
+</ol>
+<ul class="simple">
+<li><p>a.If yes, configure pull-up/down resistors on control signals for
+sleep state</p></li>
+</ul>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Look for cell voltage measurement amps for 12S levels</p></li>
+</ol>
+<ul>
+<li><ol class="loweralpha simple">
+<li><p>See if anything else is incompatible</p></li>
+</ol>
+<ul class="simple">
+<li><ol class="lowerroman simple">
+<li><p>Will need to move shunt to low-side measurement</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><ol class="loweralpha simple" start="2">
+<li><p>Don’t limit to parts with a shutdown pin</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>Determine resistor divide ratios for VOUT_DIVIDED and
+VSTACK_DIVIDED</p></li>
+</ol>
+<ul class="simple">
+<li><ol class="loweralpha simple">
+<li><p>Add zener clamps to these as well</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>Determine if cell voltage diff amps should use Vref=1.3V resistor
+ratios or if Vref=1.6 is ok</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p>Add pull-ups to I2C if needed</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p>Measure the average power consumption of the SBS write that into
+the MCU ROM</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aerpaw-uav.atlassian.net/l/cp/KRZx15VE">Interface</a></p>
+<ul>
+<li><p>Battery CANBUS &amp; Balance connector</p>
+<ul>
+<li><p>CANBUS and I2C connections</p>
+<ul>
+<li><p>Must be opto-isolated because, when stacking multiple 6S
+SBS, each module’s “ground” is not 0 V to the Cube, but a
+sum of all the battery stack voltages below it</p></li>
+<li><p>CAN must be capable of 5 Mbps (future systems may use
+high-speed CAN FD) (
+<a class="reference external" href="https://www.can-cia.org/index.php?id=systemdesign-can-physicallayer#high">CA</a>
+N in
+<a class="reference external" href="https://www.can-cia.org/index.php?id=systemdesign-can-physicallayer#high">Automation</a>
+(CiA) )</p></li>
+</ul>
+</li>
+<li><p>Cell voltages (C_n) feed directly to the battery charger</p>
+<ul>
+<li><p>These shall function if no component is populated on the SBS
+PCB</p></li>
+<li><p>The 6S SBS uses only C_1 through C_6, so C_7 through C_12
+are “no connects”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Detect_OUT and Detect_IN will be connected by the Host</p></li>
+<li><p>The Host is responsible for connecting the cells, CAN, I2C, 5V, GND,
+and Detect pins properly</p></li>
+<li><p>Battery High Current</p>
+<ul>
+<li><p>The load capacitance may be estimated to be a maximum of 6000 uF</p></li>
+</ul>
+</li>
+<li><p>Shall contain a separate header on the PCB for UART debugging</p></li>
+<li><p>Shall measure each cell voltage and the entire stack voltage</p></li>
+<li><p>Shall measure the battery current in the range [-190, 190] A</p>
+<ul>
+<li><p>Needs higher precision at smaller currents [-1, 1] A because it
+can spend a long time supplying a small currents</p></li>
+</ul>
+</li>
+<li><p>Shall measure the voltage on the output terminals</p>
+<ul>
+<li><p>Determines whether connected to charger</p></li>
+</ul>
+</li>
+<li><p>Shall provide an ideal diode setup for low current (drone on ground)
+setups to allow for hotswapping battery stacks</p>
+<ul>
+<li><p>The ideal diode setup shall enable inrush control and load
+switching</p></li>
+<li><p>Shall be able to enforce a maximum current through the ideal diode
+10 A (the limit is configurable by the firmware - use the current
+amplifiers and compare to a constant)</p></li>
+<li><p>Shall limit the inrush current to 10 A (same as max current listed
+above)</p></li>
+</ul>
+</li>
+<li><p>Shall allow for regenerative braking (reverse current to charge
+batteries) while drone in flight</p></li>
+<li><p>Shall contain a NTC thermistor for temperature measurement/reporting
+by software</p></li>
+<li><p>Shall contain a piezo</p>
+<ul>
+<li><p>Low battery warning</p></li>
+</ul>
+</li>
+<li><p>Shall contain a RGB LED for SoC indication</p>
+<ul>
+<li><p>If easy enough, have several DNP LEDs in a row for indicating SoC
+(more intuitive)</p></li>
+</ul>
+</li>
+<li><p>Shall read a resistance across Detect_OUT ↔︎ Detect_IN to indicate
+operation modes</p>
+<ul>
+<li><p>Resistance 0 (short) means connected to charger</p></li>
+<li><p>Resistance 4.7k means connected to 12S drone</p></li>
+<li><p>Resistance 2.2k means connected to 6S drone</p></li>
+<li><p>Open means nothing is connected</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="software-notes">
+<h2>Software Notes<a class="headerlink" href="#software-notes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>e^2 studio: e²
+<a class="reference external" href="https://www.renesas.com/us/en/software-tool/e-studio">studio</a></p>
+<ul>
+<li><p>Install Synergy Software Package Renesas
+<a class="reference external" href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/renesas-synergy-platform-mcus/renesas-synergy-software-package">Synergy™</a>
+Software Package (SSP)</p></li>
+</ul>
+</li>
+<li><p>DK-S128 S128
+<a class="reference external" href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/renesas-synergy-platform-mcus/rtk7dks128s00001bu-dk-s128-development-kit">Development</a>
+Kit</p></li>
+<li><p><a class="reference external" href="https://www.renesas.com/us/en/document/qsg/development-kit-s128-dk-s128-quick-start-guide?r=1261681">High-level</a>
+overview</p></li>
+<li><p>Detailed
+<a class="reference external" href="https://www.renesas.com/us/en/document/mat/development-board-kit-s128-dk-s128-users-manual-v20?r=1261681">description</a></p></li>
+<li><p>Board
+<a class="reference external" href="https://www.renesas.com/us/en/document/pcs/renesas-synergy-development-kit-dk-s128-v20-design-data?r=1261681">design</a>
+data (we have rev. 2)</p></li>
+</ul>
+</section>
+<section id="mcu-notes">
+<h2>MCU Notes<a class="headerlink" href="#mcu-notes" title="Link to this heading">¶</a></h2>
+<section id="pin-mappings">
+<h3>Pin Mappings<a class="headerlink" href="#pin-mappings" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Can probably simplify the shutdown/enable signals, but leaving this
+open as a placeholder</p></li>
+<li><p>Place Detect_OUT driver and Detect_IN resistor divider reading close
+together</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>P
+i
+n
+T
+y
+p
+e</p></th>
+<th class="head"><p>S
+i
+g
+n
+a
+l</p></th>
+<th class="head"><p>Port</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A
+D
+C</p></td>
+<td><p>A
+N
+0
+0
+0
+A
+N
+0
+1
+3
+A
+N
+0
+1
+6
+A
+N
+0
+2
+2</p></td>
+<td><p>P000P
+004,P010P015,P5
+00P502,P100P106</p></td>
+<td><p>“PinsAN000toAN013cannotbe
+usedasgeneralI/O,IRQ2input,orforTStransmissi
+onwhentheA/Dconverterisinuse.”(S128Datasheet
+Table2.48)Therefore,pinswiththefunctionsAN00
+0AN013shallbeselectedforADCinputsAN016AN022.</p></td>
+</tr>
+<tr class="row-odd"><td><p>G
+P
+I
+O</p></td>
+<td><p>a</p></td>
+<td><p>P000
+P004,P010P015,P
+100P113,P201,P2
+04P206,P212P213
+,P300P304,P400P
+403,P407P411,P5
+00P502,P914P915</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>G
+P
+I</p></td>
+<td></td>
+<td><p>P200,P214P215</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>I
+R
+Q</p></td>
+<td><p>I
+R
+Q
+0
+I
+R
+Q
+7</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>T
+y
+p
+e</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Q
+u
+a
+n
+t
+i
+t
+y</p></th>
+<th class="head"><p>Pin(s)MCU</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A
+D
+C</p></td>
+<td><p>Shu
+ntamplifi
+erreading</p></td>
+<td><p>4</p></td>
+<td><p>I_FORWARD_HIGHRANGE:
+AN003(P003)I_FORWARD_LOWRANGE:AN002(P002)I_REVERSE_
+HIGHRANGE:AN001(P001)I_REVERSE_LOWRANGE:AN000(P000)</p></td>
+</tr>
+<tr class="row-odd"><td><p>A
+D
+C</p></td>
+<td><p>Cellvolta
+gereading</p></td>
+<td><p>6</p></td>
+<td><p>MCU_VCELL6:AN012(P501)MCU_VCEL
+L5:AN011(P502)MCU_VCELL4:AN010(P015)MCU_VCELL3:AN00
+9(P014)MCU_VCELL2:AN008(P013)MCU_VCELL1:AN007(P012)</p></td>
+</tr>
+<tr class="row-even"><td><p>A
+D
+C</p></td>
+<td><p>Thermist
+orreading</p></td>
+<td><p>1</p></td>
+<td><p>VTHERM:AN017(P105)</p></td>
+</tr>
+<tr class="row-odd"><td><p>A
+D
+C</p></td>
+<td><p>Dete
+ct_INresi
+stordivid
+erreading</p></td>
+<td><p>1</p></td>
+<td><p>Detect_IN:AN016(P106)</p></td>
+</tr>
+<tr class="row-even"><td><p>A
+D
+C</p></td>
+<td><p>V
+OUT_DIVID
+EDreading</p></td>
+<td><p>1</p></td>
+<td><p>VOUT_DIVIDED:AN004(P004)</p></td>
+</tr>
+<tr class="row-odd"><td><p>A
+D
+C</p></td>
+<td><p>VST
+ACK_DIVID
+EDreading</p></td>
+<td><p>1</p></td>
+<td><p>VSTACK_DIVIDED:AN013(P500)</p></td>
+</tr>
+<tr class="row-even"><td><p>S
+e
+r
+i
+a
+l</p></td>
+<td><p>CAN0</p></td>
+<td><p>1</p></td>
+<td><p>SBS
+_CAN_RX:CRX0_C(P102)(46)SBS_CAN_TX:CTX0_C(P103)(45)</p></td>
+</tr>
+<tr class="row-odd"><td><p>S
+e
+r
+i
+a
+l</p></td>
+<td><p>I2C1</p></td>
+<td><p>1</p></td>
+<td><p>SBS_I
+2C_SDA:SDA1_B(P101)(47)SBS_I2C_SCL:SCL1_B(P100)(48)</p></td>
+</tr>
+<tr class="row-even"><td><p>S
+e
+r
+i
+a
+l</p></td>
+<td><p>UART</p></td>
+<td><p>1</p></td>
+<td><p>SBS_U
+ART_RX:RXD9_B(P110)(35)SBS_UART_TX:TXD9_B(P109)(34)</p></td>
+</tr>
+<tr class="row-odd"><td><p>S
+e
+r
+i
+a
+l</p></td>
+<td><p>JTAG(
+programmi
+ng/debug)</p></td>
+<td><p>1</p></td>
+<td><p>SWCLK:SWCLK(P300)(32)SWDIO:SWDIO(P108)(33)</p></td>
+</tr>
+<tr class="row-even"><td><p>G
+P
+I
+O</p></td>
+<td><p>RGBLED</p></td>
+<td><p>3</p></td>
+<td><p>RGB_BL
+UE:(P302)(30)RGB_RED:(P303)(29)RGB_GREEN:(P304)(28)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>G
+P
+I
+O</p></th>
+<th class="head"><p>Piezo</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>PIEZO:(P206)(22)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>G
+P
+I
+O</p></td>
+<td><p>SHDN_C
+ELL_VMEASURE(activehigh)</p></td>
+<td><p>1</p></td>
+<td><p><a href="#id1"><span class="problematic" id="id2">SHDN_</span></a>
+CELL_VMEASURE:(P104)(44)</p></td>
+</tr>
+<tr class="row-odd"><td><p>G
+P
+I
+O</p></td>
+<td><p>EN_C
+URRENT_SENSE(activehigh)</p></td>
+<td><p>1</p></td>
+<td><p>EN
+_CURRENT_SENSE:(P401)(2)</p></td>
+</tr>
+<tr class="row-even"><td><p>G
+P
+I
+O</p></td>
+<td><p>EN
+_IDEAL_DIODE(activehigh)</p></td>
+<td><p>1</p></td>
+<td><p>E
+N_IDEAL_DIODE:(P113)(38)</p></td>
+</tr>
+<tr class="row-odd"><td><p>G
+P
+I
+O</p></td>
+<td><p>EN_FET_ARRAY(activehigh)</p></td>
+<td><p>1</p></td>
+<td><p>EN_FET_ARRAY:(P111)(36)</p></td>
+</tr>
+<tr class="row-even"><td><p>G
+P
+I
+O</p></td>
+<td><p>~{<a href="#id3"><span class="problematic" id="id4">SHDN_FET_</span></a>
+ARRAY_DRIVER}(activelow)</p></td>
+<td><p>1</p></td>
+<td><p>~{<a href="#id5"><span class="problematic" id="id6">SHDN_FET_</span></a>
+ARRAY_DRIVER}:(P112)(36)</p></td>
+</tr>
+<tr class="row-odd"><td><p>G
+P
+I
+O</p></td>
+<td><p>D
+ebug/state-of-chargeLEDs</p></td>
+<td><p>min4,max8</p></td>
+<td><p>nomapping</p></td>
+</tr>
+<tr class="row-even"><td><p>G
+P
+I
+O</p></td>
+<td><p>Detect_OUTdriver</p></td>
+<td><p>1</p></td>
+<td><p>Detect_OUT:(P107)(41)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="can-communication">
+<h2>CAN Communication<a class="headerlink" href="#can-communication" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple" start="8">
+<li><p>Hardware design
+<a class="reference external" href="https://legacy.uavcan.org/Specification/8._Hardware_design_recommendations/">recommendations</a>
+- UAVCAN</p></li>
+</ol>
+<p><img alt="image1" src="../_images/_page_4_Figure_31.jpeg" /></p>
+<section id="analog-voltages-adc">
+<h3>Analog Voltages / ADC<a class="headerlink" href="#analog-voltages-adc" title="Link to this heading">¶</a></h3>
+<p>Maximum pin voltages</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>U
+n
+i
+t</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Power supply
+voltage</p></td>
+<td></td>
+<td><p>VCC</p></td>
+<td><p>-0.5 to +6.5</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input
+voltage</p></td>
+<td><p>5 V tolerant ports*1</p></td>
+<td><p>V in</p></td>
+<td><p>-0.3 to +6.5</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>P000 to P004P010 to
+P015P500 to P502</p></td>
+<td><p>V in</p></td>
+<td><p>-0.3 to
+AVCC0 + 0.3</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Others</p></td>
+<td><p>V in</p></td>
+<td><p>-0.3 to VCC
++ 0.3</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td><p>Reference
+power supply
+v</p></td>
+<td><p>voltage</p></td>
+<td><p>VREFH0</p></td>
+<td><p>-0.3 to +6.5</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Analog power
+supply volta</p></td>
+<td><p>age</p></td>
+<td><p>AVCC0</p></td>
+<td><p>-0.5 to +6.5</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td><p>USB power
+supply
+voltage</p></td>
+<td><p>9</p></td>
+<td><p>VCC_USB</p></td>
+<td><p>-0.5 to +6.5</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><a href="#id7"><span class="problematic" id="id8">VCC_</span></a>
+USB_LDO</p></td>
+<td><p>-0.5 to +6.5</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td><p>Analog input
+voltage</p></td>
+<td><p>When AN000 to AN013 are
+used</p></td>
+<td><p>V AN</p></td>
+<td><p>-0.3 to
+AVCC0 + 0.3</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>When AN016 to AN022 are
+used</p></td>
+<td></td>
+<td><p>-0.3 to VCC
++ 0.3</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating
+t
+emperature*2</p></td>
+<td><p>3</p></td>
+<td><p>T opr</p></td>
+<td><p>-40 to
++85-40 to
++105</p></td>
+<td><p>°
+C</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage
+temperature</p></td>
+<td></td>
+<td><p>T stg</p></td>
+<td><p>-55 to +125</p></td>
+<td><p>°
+C</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Consulting the S128 User Manual section 1.7 (Pin Lists) shows the
+ports related to AVCC0 are ADC inputs AN000 through AN013</p></li>
+<li><p>AN016..AN022 are tolerant of voltages up to VCC</p></li>
+<li><p>Reference voltages</p>
+<ul>
+<li><p>Internal reference</p></li>
+</ul>
+</li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>M
+i
+n</p></th>
+<th class="head"><p>Т
+у
+р</p></th>
+<th class="head"><p>M
+a
+x</p></th>
+<th class="head"><p>U
+n
+i
+t</p></th>
+<th class="head"><p>Test
+c
+onditions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Internal reference voltage
+inputchannel* 2</p></td>
+<td><p>3
+6</p></td>
+<td><p>4
+3</p></td>
+<td><p>5
+0</p></td>
+<td><p>V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Frequency*3</p></td>
+<td><p>1</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>2</p></td>
+<td><p>M
+H
+z</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>Sampling time*4</p></td>
+<td><p>0</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>μ
+s</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="s128-user-manual-table-46-49">
+<h4>S128 User Manual Table 46.49<a class="headerlink" href="#s128-user-manual-table-46-49" title="Link to this heading">¶</a></h4>
+<p>Internal reference experiment</p>
+<p>Variation in internal reference may be more subject to temperature and
+AVCC0 than random noise</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>E
+xternal</p></th>
+<th class="head"><p>r
+eferences</p></th>
+<th class="head"><p>arean</p></th>
+<th class="head"><p>option(</p></th>
+<th class="head"><p>A
+VCC0</p></th>
+<th class="head"><p>a
+nd</p></th>
+<th class="head"><p>V
+REFH0</p></th>
+<th class="head"><p>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Analog power supply
+voltages</p></th>
+<th class="head"><p>AV
+CC0<em>1,</em>
+2</p></th>
+<th class="head"></th>
+<th class="head"><p>6</p></th>
+<th class="head"><ul class="simple">
+<li></li>
+</ul>
+</th>
+<th class="head"><p>5.5</p></th>
+<th class="head"><p>V</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>AVSS0</p></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>0</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>VREFH0</p></td>
+<td><p>When used as</p></td>
+<td><p>6</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>AV
+CC0</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>VREFL0</p></td>
+<td><p>ADC14
+Reference</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>0</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>V</p></td>
+</tr>
+</tbody>
+</table>
+<p>S128 Datasheet Table 2.2 (Recommended operating conditions : min, typ,
+max, unit)</p>
+<ul class="simple">
+<li><p>AVCC0 is the analog block supply rail</p>
+<ul>
+<li><p>Refer to the SBS
+<a class="reference external" href="https://aerpaw-uav.atlassian.net/l/cp/8C2nr3wA">Design</a>
+“Analog Power” section for the value</p></li>
+</ul>
+</li>
+<li><p>VREFH0 is an optional high-side external reference can be supplied in
+case the internal reference isn’t accurate enough</p>
+<ul>
+<li><p>This voltage cannot go below 1.6 V, so supplying a ‘more stable
+1.45 V’ is unfortunately not an option</p></li>
+</ul>
+</li>
+</ul>
+<p>Modeling ADC inputs</p>
+<p><img alt="image2" src="../_images/_page_6_Figure_11.jpeg" /></p>
+<p>Figure 2.62 from MCU
+<a class="reference external" href="https://www.renesas.com/us/en/document/dst/s128-microcontroller-group-datasheet">Datasheet</a></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"></th>
+<th class="head"><p>M
+i
+n</p></th>
+<th class="head"><p>Т
+у
+р</p></th>
+<th class="head"><p>Max</p></th>
+<th class="head"><p>U
+n
+i
+t</p></th>
+<th class="head"><p>Test Conditions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Frequency</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>64</p></td>
+<td><p>M
+H
+z</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Analog input
+capacitance*2</p></td>
+<td><p>C
+s</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>8 (reference
+data)</p></td>
+<td><p>p
+F</p></td>
+<td><p>High-precision
+channel</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>9 (reference
+data)</p></td>
+<td><p>p
+F</p></td>
+<td><p>Normal-precision
+channel</p></td>
+</tr>
+<tr class="row-odd"><td><p>Analog input
+resistance</p></td>
+<td><p>R
+s</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>2.5
+(reference
+data)</p></td>
+<td><p>k
+Ω</p></td>
+<td><p>High-precision
+channel</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>6.7
+(reference
+data)</p></td>
+<td><p>k
+Ω</p></td>
+<td><p>Normal-precision
+channel</p></td>
+</tr>
+<tr class="row-odd"><td><p>Analog input
+voltage range</p></td>
+<td><p>A
+i
+n</p></td>
+<td><p>0</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>VREFH0</p></td>
+<td><p>۷</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2.41 from MCU
+<a class="reference external" href="https://www.renesas.com/us/en/document/dst/s128-microcontroller-group-datasheet">Datasheet</a></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"></th>
+<th class="head"><p>Sym
+bol</p></th>
+<th class="head"><p>M
+i
+n</p></th>
+<th class="head"><p>Т
+у
+р</p></th>
+<th class="head"><p>M
+a
+x</p></th>
+<th class="head"><p>U
+n
+i
+t</p></th>
+<th class="head"><p>Test conditions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Input leakage
+current</p></td>
+<td><p>RES, Ports P200,
+P214, P215</p></td>
+<td><p>I
+in</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>0</p></td>
+<td><p>μ
+Α</p></td>
+<td><p>V in = 0 VV in
+= VCC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Three-state
+l
+eakagecurrent
+(off state)</p></td>
+<td><p>5V-tolerant ports</p></td>
+<td><p>I
+TSI</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>0</p></td>
+<td><p>μ
+Α</p></td>
+<td><p>V in = 0 VV in
+= 5.8 V</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Other ports</p></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>0</p></td>
+<td></td>
+<td><p>V in = 0 VV in
+= VCC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input pull-up
+resistor</p></td>
+<td><p>All ports(except
+for P200, P214,
+P215,P914, P915)</p></td>
+<td><p>R U</p></td>
+<td><p>1
+0</p></td>
+<td><p>2
+0</p></td>
+<td><p>5
+0</p></td>
+<td><p>k
+Ω</p></td>
+<td><p>V in = 0 V</p></td>
+</tr>
+<tr class="row-even"><td><p>Input
+capacitance</p></td>
+<td><p>USB_DP, USB_DM,
+P200</p></td>
+<td><p>C
+in</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>3
+0</p></td>
+<td><p>p
+F</p></td>
+<td><p>V in = 0 V</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Other input pins</p></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1
+5</p></td>
+<td></td>
+<td><p>f = 1 MHzT a =
+25°C</p></td>
+</tr>
+</tbody>
+</table>
+<p>Table 2.10 from MCU
+<a class="reference external" href="https://www.renesas.com/us/en/document/dst/s128-microcontroller-group-datasheet">Datasheet</a></p>
+</section>
+<section id="low-power-modes">
+<h4>Low Power Modes<a class="headerlink" href="#low-power-modes" title="Link to this heading">¶</a></h4>
+<p>There are two dimensions to low power functions:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Low power mode (Sleep, Software Standby, and Snooze modes)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Power control modes (clock speeds like High-speed, Middle-speed,
+Low-speed, Low-voltage, and Subosc-speed)</p></li>
+</ol>
+</li>
+</ul>
+<p>The use of XCIN/XCOUT’s 32.768 kHz oscillator enables current draws in
+the uA in both Normal mode and Sleep mode (S128 Datasheet Table 2.11
+(Operating and standby current)).</p>
+<p>Concerning the states of I/O ports during sleep, the S128 User Manual
+Table 10.2 (Operating conditions of each low power mode) specifies:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>T
+a
+b
+l
+e
+1</p></th>
+<th class="head"><p>10.2 Operating conditions of</p></th>
+<th class="head"><p>each low power
+mode (1</p></th>
+<th class="head"><p>of 2)</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>P
+a
+r
+a
+m</p></td>
+<td><p>eter</p></td>
+<td><p>Sleep mode</p></td>
+<td><p>Sof
+tware
+St
+andby
+mode</p></td>
+<td><p>S
+n
+o
+o
+z
+e
+m
+o
+d
+e
+*
+1</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>O
+P
+o</p></td>
+<td><p>rts</p></td>
+<td><p>Operating</p></td>
+<td><p>Ret
+ained</p></td>
+<td><p>O
+p
+e
+r
+a
+t
+i
+n
+g</p></td>
+</tr>
+<tr class="row-odd"><td><p>N
+o
+t
+e
+:</p></td>
+<td><p>Selectable means that operating or
+nStop (Retained) means that the
+controlOperation prohibited means
+that theOtherwise, proper operation
+is not ou</p></td>
+<td><p>ents of the
+internal
+registers and
+function must
+be stopped
+before</p></td>
+<td><p>re
+ret
+ained
+but
+the
+opera
+tions</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This means pull-up/pull-down resistors are not required to enforce
+default states when the MCU is asleep.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="AERPAW Operators Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="VD-SBSDesign/index.html" class="btn btn-neutral float-right" title="SBS Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, AERPAW.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
